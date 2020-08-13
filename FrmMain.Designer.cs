@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_Top = new System.Windows.Forms.Panel();
+            this.button_ReadDynamicXY = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_dynamicObject = new System.Windows.Forms.Button();
+            this.checkBox_Rain = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,13 +46,9 @@
             this.panel_Map3D = new System.Windows.Forms.Panel();
             this.panel_Map3DEx = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.checkBox_Rain = new System.Windows.Forms.CheckBox();
-            this.button_dynamicObject = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_ReadDynamicXY = new System.Windows.Forms.Button();
             this.panel_Top.SuspendLayout();
-            this.panel_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel_Main.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Top
@@ -70,6 +70,46 @@
             this.panel_Top.Name = "panel_Top";
             this.panel_Top.Size = new System.Drawing.Size(1192, 80);
             this.panel_Top.TabIndex = 0;
+            // 
+            // button_ReadDynamicXY
+            // 
+            this.button_ReadDynamicXY.Location = new System.Drawing.Point(388, 43);
+            this.button_ReadDynamicXY.Name = "button_ReadDynamicXY";
+            this.button_ReadDynamicXY.Size = new System.Drawing.Size(129, 23);
+            this.button_ReadDynamicXY.TabIndex = 11;
+            this.button_ReadDynamicXY.Text = "读取动态对象坐标";
+            this.button_ReadDynamicXY.UseVisualStyleBackColor = true;
+            this.button_ReadDynamicXY.Click += new System.EventHandler(this.button_ReadDynamicXY_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(877, 11);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(303, 64);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // button_dynamicObject
+            // 
+            this.button_dynamicObject.Location = new System.Drawing.Point(273, 43);
+            this.button_dynamicObject.Name = "button_dynamicObject";
+            this.button_dynamicObject.Size = new System.Drawing.Size(109, 23);
+            this.button_dynamicObject.TabIndex = 9;
+            this.button_dynamicObject.Text = "动态生成对象";
+            this.button_dynamicObject.UseVisualStyleBackColor = true;
+            this.button_dynamicObject.Click += new System.EventHandler(this.button_dynamicObject_Click);
+            // 
+            // checkBox_Rain
+            // 
+            this.checkBox_Rain.AutoSize = true;
+            this.checkBox_Rain.Location = new System.Drawing.Point(182, 43);
+            this.checkBox_Rain.Name = "checkBox_Rain";
+            this.checkBox_Rain.Size = new System.Drawing.Size(48, 16);
+            this.checkBox_Rain.TabIndex = 8;
+            this.checkBox_Rain.Text = "降雨";
+            this.checkBox_Rain.UseVisualStyleBackColor = true;
+            this.checkBox_Rain.CheckedChanged += new System.EventHandler(this.checkBox_Rain_CheckedChanged);
             // 
             // button5
             // 
@@ -190,46 +230,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // checkBox_Rain
-            // 
-            this.checkBox_Rain.AutoSize = true;
-            this.checkBox_Rain.Location = new System.Drawing.Point(182, 43);
-            this.checkBox_Rain.Name = "checkBox_Rain";
-            this.checkBox_Rain.Size = new System.Drawing.Size(48, 16);
-            this.checkBox_Rain.TabIndex = 8;
-            this.checkBox_Rain.Text = "降雨";
-            this.checkBox_Rain.UseVisualStyleBackColor = true;
-            this.checkBox_Rain.CheckedChanged += new System.EventHandler(this.checkBox_Rain_CheckedChanged);
-            // 
-            // button_dynamicObject
-            // 
-            this.button_dynamicObject.Location = new System.Drawing.Point(273, 43);
-            this.button_dynamicObject.Name = "button_dynamicObject";
-            this.button_dynamicObject.Size = new System.Drawing.Size(109, 23);
-            this.button_dynamicObject.TabIndex = 9;
-            this.button_dynamicObject.Text = "动态生成对象";
-            this.button_dynamicObject.UseVisualStyleBackColor = true;
-            this.button_dynamicObject.Click += new System.EventHandler(this.button_dynamicObject_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(877, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 64);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // button_ReadDynamicXY
-            // 
-            this.button_ReadDynamicXY.Location = new System.Drawing.Point(432, 45);
-            this.button_ReadDynamicXY.Name = "button_ReadDynamicXY";
-            this.button_ReadDynamicXY.Size = new System.Drawing.Size(129, 23);
-            this.button_ReadDynamicXY.TabIndex = 11;
-            this.button_ReadDynamicXY.Text = "读取动态对象坐标";
-            this.button_ReadDynamicXY.UseVisualStyleBackColor = true;
-            this.button_ReadDynamicXY.Click += new System.EventHandler(this.button_ReadDynamicXY_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -244,8 +244,8 @@
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
-            this.panel_Main.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel_Main.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
