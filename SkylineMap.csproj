@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D67D5600-3518-4253-A94D-BBFAAD14525F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkylineMap</RootNamespace>
+    <AssemblyName>SkylineMap</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CYQ.Data">
+      <HintPath>..\DaoQinGIS\ActiveX\CYQ.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\DynamicObjectRoute.cs" />
+    <Compile Include="Class\SkylineCommandCode.cs" />
+    <Compile Include="Class\WeatherHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TerrainControls\UcTerrainEyeMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainEyeMap.designer.cs">
+      <DependentUpon>UcTerrainEyeMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainInfoTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainInfoTree.designer.cs">
+      <DependentUpon>UcTerrainInfoTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainWindow.designer.cs">
+      <DependentUpon>UcTerrainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainWindowEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerrainControls\UcTerrainWindowEx.designer.cs">
+      <DependentUpon>UcTerrainWindowEx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainControls\UcTerrainEyeMap.resx">
+      <DependentUpon>UcTerrainEyeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainControls\UcTerrainInfoTree.resx">
+      <DependentUpon>UcTerrainInfoTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainControls\UcTerrainWindow.resx">
+      <DependentUpon>UcTerrainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerrainControls\UcTerrainWindowEx.resx">
+      <DependentUpon>UcTerrainWindowEx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxTerraExplorerX">
+      <Guid>{B87695B0-65AD-11D5-85C1-0001023952C1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="TerraExplorerX">
+      <Guid>{B87695B0-65AD-11D5-85C1-0001023952C1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
